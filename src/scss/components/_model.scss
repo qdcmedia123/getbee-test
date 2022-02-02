@@ -1,0 +1,145 @@
+.model-container {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  z-index: 1000;
+  .model {
+    overflow-y: scroll;
+    position: fixed;
+    right: -(pxToRem(480));
+    max-width: pxToRem(480);
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    row-gap: 2rem;
+    border: 1px solid $light-gray;
+    flex-direction: column;
+    -webkit-animation: slide 0.5s forwards;
+    -webkit-animation-delay: 0.5s;
+    animation: slide 0.5s forwards;
+    animation-delay: 0.5s;
+    .close {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+      position: relative;
+      .close-icon {
+        position: relative;
+        top: 1rem;
+        right: 1rem;
+      }
+    }
+    .row {
+      .tab-container {
+        .tab-ul {
+          padding: 0 2rem;
+        }
+        .tab-content {
+          form {
+            padding: 0 2rem;
+          }
+        }
+      }
+      .title {
+        font-style: normal;
+        font-weight: normal;
+        font-size: pxToRem(40);
+        line-height: pxToRem(40);
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.06em;
+        color: $dark-bg-txt;
+        padding: 0 2rem;
+      }
+      .intro {
+        display: flex;
+        align-items: center;
+      }
+      .update {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+        .buttons {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          border-top: 1px solid $light-gray;
+          border-bottom: 1px solid $light-gray;
+        }
+        .message {
+          font-family: $default-font-family;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 11px;
+          line-height: 14px;
+          color: #c3c5ca;
+        }
+      }
+      .tab-container {
+        height: 100%;
+        .tab-content {
+          height: 100%;
+          form {
+            display: flex;
+            flex-direction: column;
+            row-gap: pxToRem(24);
+            position: relative;
+            height: 100%;
+            .form-group {
+              label {
+                font-family: Inter;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 11px;
+                line-height: 14px;
+                color: $heavy-grey;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                margin: 6px 0px;
+              }
+              .delete-user {
+                color: #fc5d5b;
+                flex: none;
+                order: 0;
+                flex-grow: 0;
+                margin: 0px 12px;
+                font-size: 11px;
+                line-height: 14px;
+              }
+            }
+          }
+          .actions {
+            bottom: 0;
+            display: flex;
+            button {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.vh1 {
+  height: 100%;
+}
+@-webkit-keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+@keyframes slide {
+  100% {
+    right: 0;
+  }
+}
+.show-model-container {
+  display: block !important;
+}
+.hide-model-container {
+  display: none;
+  max-width: pxToRem(480);
+}

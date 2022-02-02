@@ -1,0 +1,150 @@
+.dashboard-main {
+  margin-top: pxToRem(56);
+
+  .row {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-700) {
+      row-gap: 1rem;
+    }
+    .team-member {
+      font-family: $default-font-family;
+
+      font-style: normal;
+      font-weight: normal;
+      font-size: pxToRem(56);
+      line-height: pxToRem(56);
+      /* identical to box height, or 100% */
+      letter-spacing: -0.04em;
+      flex-wrap: wrap;
+      margin-right: auto;
+
+      color: #1a1a1c;
+      @media only screen and (max-width: $bp-700) {
+        margin-right: 0;
+      }
+    }
+    .form {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      column-gap: 1rem;
+
+      @media only screen and (max-width: $bp-700) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .search-form {
+        @media only screen and (max-width: $bp-700) {
+          width: 100%;
+        }
+      }
+      .search-input {
+        position: relative;
+        display: flex;
+        padding-left: 2rem;
+        @media only screen and (max-width: $bp-700) {
+          flex: 1;
+        }
+
+        .search-icon {
+          position: absolute;
+          z-index: 1;
+          top: 25%;
+        }
+      }
+    }
+  }
+}
+
+.tab-container {
+  margin-top: pxToRem(40);
+  position: relative;
+  height: 100%;
+  .tab-ul {
+    display: flex;
+    ul {
+      display: flex;
+      column-gap: pxToRem(40);
+      border-bottom: 1px solid #c3c5ca;
+      li {
+        display: flex;
+        column-gap: pxToRem(8);
+        cursor: pointer;
+        padding: 0 0 1rem 0;
+
+        &::after {
+          transition: all ease-in-out 0.2s;
+          background: none repeat scroll 0 0 #ffffff;
+          content: "";
+          display: block;
+          height: 2px;
+          width: 0;
+        }
+        &::after:hover:after {
+          width: 100%;
+          padding-right: 35px;
+        }
+      }
+
+      li.selected-li {
+        span {
+          font-weight: 700;
+          color: $dark-bg-txt;
+        }
+        transition: border-width 0.1s linear;
+        border-bottom: 3px solid $dark-bg-txt;
+      }
+
+      span {
+        font-size: pxToRem(13);
+        line-height: pxToRem(16);
+        /* identical to box height, or 123% */
+        color: $heavy-grey;
+        display: flex;
+        align-items: center;
+        letter-spacing: -0.01em;
+
+        /* Black */
+      }
+    }
+  }
+
+  .tab-content {
+    position: relative;
+    width: 100%;
+    min-height: 15.875rem;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+
+    .tab__item {
+      width: 100%;
+      position: relative;
+      transition: visibility 0.3s linear, opacity 0.3s linear;
+    }
+
+    .tab__item.show {
+      height: auto;
+      visibility: visible;
+      opacity: 1;
+    }
+    .tab__item.hide {
+      height: 0px !important;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+li.selected-nav {
+  .item {
+    a {
+      color: $dark-bg-txt !important;
+    }
+  }
+}

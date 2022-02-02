@@ -1,0 +1,53 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root,
+.App {
+  min-height: 100vh;
+}
+body {
+  font-family: $default-font-family;
+  box-sizing: border-box;
+  background-color: #ffff;
+}
+html {
+  font-size: 100%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 80%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+input::placeholder {
+  font-family: "Inter", sans-serif;
+}
+input:focus,
+textarea {
+  outline: none;
+}
+li {
+  list-style: none;
+}
+.container {
+  max-width: $bg-large-1;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bg-large-1) {
+    padding: 1rem 1rem;
+  }
+  @media only screen and (max-width: $bp-700) {
+    max-width: 100%;
+  }
+}

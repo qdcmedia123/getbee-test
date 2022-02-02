@@ -1,0 +1,42 @@
+.btn {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: pxToRem(16) pxToRem(32) pxToRem(15);
+  cursor: pointer;
+  white-space: nowrap;
+
+  &--primary {
+    background-color: $dark-bg-txt;
+    color: $light-text;
+  }
+  &--secoundary {
+    background-color: transparent;
+    border-top: 1px solid $light-gray1;
+    border-right: 1px solid $light-gray1;
+    border-bottom: 1px solid $light-gray1;
+    position: relative;
+  }
+  &--transparent {
+    background-color: transparent;
+  }
+  &--light {
+    background-color: $light-gray2;
+  }
+
+  &--secoundary::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -1px;
+    width: pxToRem(23);
+    height: 10px;
+    background-color: #fff;
+  }
+  &--danger {
+    background-color: #bf4f51;
+    color: $light-text;
+  }
+}

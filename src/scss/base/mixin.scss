@@ -1,0 +1,7 @@
+@mixin margin($argument) {
+    $string: unquote($argument);
+  
+    &--#{$string} {
+      margin-top: unquote($argument + 'px');
+    }
+}
