@@ -1,7 +1,7 @@
 .grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 21.44rem));
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   @media only screen and (max-width: $bp-700) {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   }
