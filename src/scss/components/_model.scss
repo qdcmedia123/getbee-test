@@ -21,6 +21,10 @@
     -webkit-animation-delay: 0.5s;
     animation: slide 0.5s forwards;
     animation-delay: 0.5s;
+    @media only screen and (max-width: $bp-700) {
+      max-width: 100%;
+    }
+
     .close {
       display: flex;
       justify-content: flex-end;
