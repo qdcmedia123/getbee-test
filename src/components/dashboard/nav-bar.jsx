@@ -10,6 +10,7 @@ import teamSalesIcon from "assets/svg/team-sales-icon.svg";
 import useOnClickOutside from "hooks/useOnClickOutside";
 import HomeIcon from "assets/svg/home-icon.svg";
 import IntegrationsIcon from "assets/svg/integrations-icon.svg";
+import TeamMembersIcon from "assets/svg/team-members.svg"
 
 const NavBar = () => {
   const [selectedLi, setSelectedLi] = useState(null);
@@ -90,6 +91,23 @@ const NavBar = () => {
                   <div className="item">
                     <a href="!#" onClick={anchorOnClick}>
                       Company Details
+                    </a>
+                  </div>
+                </li>
+
+                <li
+                  className={`items ${
+                    selectedLi === "team-members-li" ? "selected-nav" : ""
+                  }`}
+                  onClick={() => setSelectedLi("team-members-li")}
+                  id="team-members-li"
+                >
+                  <div className="item">
+                    <img src={TeamMembersIcon} alt="" className="icon" />
+                  </div>
+                  <div className="item">
+                    <a href="!#" onClick={anchorOnClick}>
+                      Team members
                     </a>
                   </div>
                 </li>

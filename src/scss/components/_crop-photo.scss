@@ -1,97 +1,92 @@
-
 .crop-container {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(0,0,0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .crop-photo {
-    max-width: pxToRem(480);
-    width: 100%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: $light-text;
+  max-width: pxToRem(480);
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $light-text;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: all 0.3s;
+
+  .group1 {
+    padding: 0rem 2rem;
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    transition: all .3s;
+    row-gap: 2rem;
+  }
+  .close {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
 
-  
-    .group1 {
-      padding: 0rem 2rem;
+    .close-icon {
+      cursor: pointer;
+      position: relative;
+      top: 1rem;
+      right: 1rem;
+    }
+  }
+
+  .row {
+    .title {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 40px;
+      line-height: 40px;
+      display: flex;
+      align-items: center;
+      letter-spacing: -0.06em;
+      color: #1a1a1c;
+      flex: none;
+      order: 0;
+      align-self: stretch;
+      flex-grow: 0;
+    }
+
+    .crop-area {
+      background-color: $light-gray3;
+      padding: 1rem 0;
       display: flex;
       flex-direction: column;
-      row-gap: 2rem;
-    }
-    .close {
-      display: flex;
-      justify-content: flex-end;
-      position: relative;
-      
-      .close-icon {
-        cursor: pointer;
-        position: relative;
-        top: 1rem;
-        right: 1rem;
-  
-      }
-    }
-  
-    .row {
-     
-      .title {
-        font-style: normal;
-        font-weight: normal;
-        font-size: 40px;
-        line-height: 40px;
-        display: flex;
-        align-items: center;
-        letter-spacing: -0.06em;
-        color: #1a1a1c;
-        flex: none;
-        order: 0;
-        align-self: stretch;
-        flex-grow: 0;
-        
-      }
+      align-items: center;
 
-      .crop-area {
-          background-color: $light-gray3;
-          padding: 1rem 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+      .img {
+        background-color: $heavy-grey;
 
-          
-
-          .img {
-              background-color: $heavy-grey;
-
-              img {
-                  border-radius: 50%;
-                  border:1px solid #fff;
-              }
-          }
-
-      }
-    }
-    .actions {
-        display: flex;
-        width: 100%;
-        button {
-            flex-grow: 1;
+        img {
+          border-radius: 50%;
+          border: 1px solid #fff;
         }
+      }
     }
   }
+  .actions {
+    display: flex;
+    width: 100%;
+    button {
+      flex-grow: 1;
+    }
+    .btn--secoundary::before {
+      background-color: $light-text;
+    }
+  }
+}
 
-  .crop-show {
-      visibility: visible;
-      opacity: 1;
-  }
-  .crop-hide {
-    visibility: hidden;
-    opacity: 0;
-  }
+.crop-show {
+  visibility: visible;
+  opacity: 1;
+}
+.crop-hide {
+  visibility: hidden;
+  opacity: 0;
+}

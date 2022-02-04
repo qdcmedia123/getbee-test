@@ -17,7 +17,8 @@ body,
 body {
   font-family: $default-font-family;
   box-sizing: border-box;
-  background-color: #ffff;
+  background-color: #000000;
+  
 }
 html {
   font-size: 100%;
@@ -41,8 +42,13 @@ li {
   list-style: none;
 }
 .container {
+  background-color: $light-gray2;
   max-width: $bg-large-1;
   margin: 0 auto;
+  min-height: 100vh;
+  height: 100%;
+  padding-bottom: 2rem;
+ 
 
   @media only screen and (max-width: $bg-large-1) {
     padding: 1rem 1rem;

@@ -1,16 +1,14 @@
 .grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(21.4375rem, 1fr));
   @media only screen and (max-width: $bp-700) {
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    row-gap: pxToRem(40);
   }
   &__item:nth-child(3n + 2) {
     border-left: 1px solid $light-gray;
     border-right: 1px solid $light-gray;
-    @media only screen and (max-width: $bp-700) {
-      border: none;
-    }
   }
   &__item:nth-child(-n + 3) {
     border-top: 1px solid $light-gray;
@@ -18,6 +16,55 @@
   &__item {
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: $bp-700) {
+      &:not(:first-child){
+        border: none !important;
+      }
+      
+    }
+
+    // @media only screen and (max-width: $bp-700) {
+
+    //   display: grid;
+    //   grid-template-areas: 
+    //   'avatar name app'
+    //   'avatar email x'
+    //   'avatar badge x'
+    //   'actions actions actions';
+    //   border: none;
+
+    //   .avatar {
+    //     align-items: flex-start;
+
+    //     img {
+    //       width: pxToRem(80);
+    //       height: pxToRem(80);
+    //     }
+        
+    //     grid-area: avatar;
+    //   }
+
+    //   .contact {
+    //     grid-area: name;
+    //     align-items: flex-start;
+    //   }
+    //   .actions {
+    //     grid-area: actions;
+    //   }
+
+    //   .call-action {
+    //     .call {
+    //       grid-area: app;
+    //     }
+    //     .badge {
+    //       grid-area: badge;
+    //     }
+    //   }
+    // }
+
+    
+
     .avatar,
     .contact,
     .actions {
@@ -54,9 +101,10 @@
     .call-action {
       display: flex;
       justify-content: space-between;
-      .call {
-        margin: 0px 8px;
-      }
+      padding: 0 pxToRem(24);
+      // .call {
+      //   margin: 0px 8px;
+      // }
     }
   }
 }

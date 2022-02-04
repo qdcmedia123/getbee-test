@@ -17,6 +17,11 @@ const SideModel = ({
         showModel ? "show-model-container" : "hide-model-container"
       }`}
     >
+     {showModel && <div className="abs-btns">
+        <button className="btn btn--secoundary">User sales data</button>
+        <button className="btn btn--primary">Save user settings</button>
+      </div>} 
+
       <div className="model">
         <div className="row close">
           <div className="close-icon" onClick={() => setShowModel(false)}>
@@ -45,7 +50,7 @@ const SideModel = ({
             </div>
           </div>
         </div>
-        <div className="row vh1">
+        <div className="row">
           <div className="tab-container">
             <div className="tab-ul">
               <ul>
@@ -105,14 +110,15 @@ const SideModel = ({
                     <span className="delete-user">Delete User</span>
                   </div>
                 </form>
-                <div className="form-group actions">
+
+                {/* <div className="form-group actions">
                   <button className="btn btn--secoundary">
                     User sales data
                   </button>
                   <button className="btn btn--primary">
                     Save user settings
                   </button>
-                </div>
+                </div> */}
               </div>
               <div
                 className={`tab__item ${

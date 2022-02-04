@@ -30,11 +30,12 @@
     content: "";
     position: absolute;
     top: -5px;
-    left: -1px;
+    left: 1px;
     width: pxToRem(23);
     height: 10px;
-    background-color: #fff;
+    background-color: $light-gray2
   }
+
   &--danger {
     background-color: #bf4f51;
     color: $light-text;

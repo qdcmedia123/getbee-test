@@ -10,6 +10,12 @@ input {
 		color: $heavy-grey;
 	}
 }
+
+input[type="text"],
+input[type="email"],
+select {
+	background-color: transparent;
+}
 textarea {
 	border-top: transparent;
 	border-left: transparent;
@@ -41,7 +47,7 @@ select {
 	z-index: 100;
 }
 .form-input {
-	padding: .5rem 0;
+	// padding: .1rem 0;
 }
 input[type="submit"] {
 	border: none;

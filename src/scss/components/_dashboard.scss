@@ -9,12 +9,19 @@
       display: block;
     }
   }
+  &-sidebar {
+    max-width: pxToRem(256);
+    width: 100%;
+    max-height: pxToRem(950);
+    height: 100%;
+  }
   .show-sidebar {
     @media only screen and (max-width: $bp-700) {
       display: block;
     }
   }
   .hide-sidebar {
+    
     @media only screen and (max-width: $bp-700) {
       display: none;
     }
@@ -48,9 +55,13 @@
     }
     .logo {
       margin-top: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .admin {
       margin-top: 2rem;
+      padding-left: 2rem;
       .nav {
         display: flex;
         flex-direction: column;
@@ -130,6 +141,9 @@
               font-size: 11px;
               line-height: 14px;
               color: $heavy-grey;
+
+
+              
             }
           }
           .user {

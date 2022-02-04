@@ -5,7 +5,7 @@ import callIcon from "assets/svg/call.svg";
 const Grid = ({ role, avatar, email, fullName, setShowModel, callIcon }) => {
   return (
     <div className="grid__item item1">
-      <div className="head">
+    
         <div className="row mt-24 call-action">
           <div
             className={`badge ${
@@ -36,7 +36,7 @@ const Grid = ({ role, avatar, email, fullName, setShowModel, callIcon }) => {
           </button>
           <button className="btn btn--primary flex-1"> Sales Data</button>
         </div>
-      </div>
+     
     </div>
   );
 };
