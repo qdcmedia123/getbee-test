@@ -27,6 +27,18 @@ const Grid = ({ role, avatar, email, fullName, setShowModel, callIcon }) => {
           <div className="full-name">{fullName}</div>
           <div className="email">{email}</div>
         </div>
+
+        <div className="row mobile-badge">
+        <div
+            className={`badge ${
+              role.toLowerCase() === "admin"
+                ? "badge--primary"
+                : "badge--secoundary"
+            } mt-23 `}
+          >
+            {role}
+          </div>
+        </div>
         <div className="row actions mt-41">
           <button
             className="btn btn--secoundary flex-1"

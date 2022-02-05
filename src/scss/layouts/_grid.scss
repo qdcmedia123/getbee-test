@@ -17,6 +17,14 @@
     display: flex;
     flex-direction: column;
 
+    .mobile-badge {
+      display: none;
+
+      @media only screen and (max-width: $bp-520) {
+        margin-top: 1rem;
+      }
+    }
+
     @media only screen and (max-width: $bp-700) {
       &:not(:first-child){
         border: none !important;
@@ -24,44 +32,53 @@
       
     }
 
-    // @media only screen and (max-width: $bp-700) {
+    @media only screen and (max-width: $bp-520) {
 
-    //   display: grid;
-    //   grid-template-areas: 
-    //   'avatar name app'
-    //   'avatar email x'
-    //   'avatar badge x'
-    //   'actions actions actions';
-    //   border: none;
+      display: grid;
+      grid-template-areas: 
+      'avatar name app'
+      'avatar email x'
+      'avatar badge x'
+      'actions actions actions';
+      border: none;
 
-    //   .avatar {
-    //     align-items: flex-start;
+      .mobile-badge {
+        display: flex;
+      }
 
-    //     img {
-    //       width: pxToRem(80);
-    //       height: pxToRem(80);
-    //     }
+      .avatar {
+        align-items: flex-start;
+
+        img {
+          width: pxToRem(80);
+          height: pxToRem(80);
+        }
         
-    //     grid-area: avatar;
-    //   }
+        grid-area: avatar;
+      }
 
-    //   .contact {
-    //     grid-area: name;
-    //     align-items: flex-start;
-    //   }
-    //   .actions {
-    //     grid-area: actions;
-    //   }
+      .contact {
+        grid-area: name;
+        align-items: flex-start;
+      }
+      .actions {
+        grid-area: actions;
 
-    //   .call-action {
-    //     .call {
-    //       grid-area: app;
-    //     }
-    //     .badge {
-    //       grid-area: badge;
-    //     }
-    //   }
-    // }
+        @media only screen and (max-width: $bp-520) {
+          margin-top: pxToRem(40);
+        }
+      }
+
+      .call-action {
+        .call {
+          grid-area: app;
+        }
+        .badge {
+          display: none;
+          
+        }
+      }
+    }
 
     
 
@@ -102,6 +119,12 @@
       display: flex;
       justify-content: space-between;
       padding: 0 pxToRem(24);
+
+      @media only screen and (max-width: $bp-520) {
+        padding: 0;
+        justify-content: flex-end;
+      }
+      
       // .call {
       //   margin: 0px 8px;
       // }
