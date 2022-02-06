@@ -1,6 +1,26 @@
 .dashboard-main {
   margin-top: pxToRem(56);
   padding-right: 2rem;
+
+  .teams-row {
+    @media only screen and (max-width: $bp-largest) and (min-width:$bp-520){
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      row-gap: 1rem;
+
+      .form{
+        display: flex;
+        justify-content: flex-start !important;
+        width: 100%;
+
+        .search-form {
+          flex:1
+        }
+      }
+      
+    }
+  }
   .row {
     display: flex;
     align-items: center;
@@ -24,6 +44,8 @@
       @media only screen and (max-width: $bp-700) {
         margin-right: 0;
       }
+
+      
     }
     .form {
       display: flex;
